@@ -7,11 +7,14 @@ install.packages(c('protolite', 'jqr'), dependencies = TRUE, Ncpus = 3,repos = "
 install.packages("rstan", repos = "https://cran.csiro.au", dependencies = TRUE)
 install.packages(c('goeveg', 'vegan', 'simba', 'jose'), Ncpus = 3,repos = "https://cran.csiro.au")
 
+# Add ausplotsR
+library(devtools)
+install_github("ternaustralia/ausplotsR", build_vignettes = TRUE, dependencies = TRUE)
+
 # pre install some pkgs which are not correctly resolved as dependencies
 #  - shiny for htmlwidgets
 #  - rcpp for pdftools
-install.packages(c('shiny', 'RCpp'),
-				 Ncpus = 3,repos = "https://cran.csiro.au")
+install.packages(c('shiny', 'RCpp'), Ncpus = 3,repos = "https://cran.csiro.au")
 
 install.packages(c('abind', 'askpass', 'assertthat', 'automap', 'backports',
 				'base64enc', 'BH', 'bindr', 'bindrcpp', 'bit', 'bit64', 'bitops', 'blob',
@@ -44,4 +47,5 @@ install.packages(c('abind', 'askpass', 'assertthat', 'automap', 'backports',
 				'vctrs', 'velox', 'visNetwork' , 'viridisLite', 'whisker', 'withr', 'xfun', 'xml2',
 				'xopen', 'xtable', 'xts', 'yaml', 'zeallot', 'zip', 'zoo'),
 				 Ncpus = 3,repos = "https://cran.csiro.au")
+
 ### 'RcppEigen' was left out, it is not working
